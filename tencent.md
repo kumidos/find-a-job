@@ -36,3 +36,7 @@
 - 有了解分布式系统吗？ 答：举了一些框架的例子。问：知道cap原则吗？ 答：（不知） 问：知道dubbo吗， 用过吗。答：知它的负载均衡，服务发现和管理什么的
 - 有了解腾讯的XXX分布式框架吗？（名字记不得了）
 - 有了解过hadoop吗，它的一些背景，原理和使用 
+#### 重新整理
+- [sychronized  关键字](https://blog.csdn.net/javazejian/article/details/72828483)
+- [ConcurrentHashMap](https://blog.csdn.net/justloveyou_/article/details/72783008)
+- [map && hashmap](http://www.jasongj.com/java/concurrenthashmap/)
