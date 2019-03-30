@@ -17,6 +17,12 @@ http是如何解决粘包拆包的问题？ 我（凌乱）：好像也可以用
 时修改元素会如何？我： fail fast 报并发修改错误。 问： 那该怎办呢？ 我： 可以用concurrentHashMap
 - concurrentHashMap 原理？ 我：jdk7, jdk8两个版本。简单介绍了下jdk7版本的，讲了下segment 和对entry里面属性的修改
 - 你的项目明显会有并发操作， 为什么还要用hashmap 我： 老实承认只是保证了channelhandler的shareble的但没考虑到里面集合的并发
+- 线程池的实现了解过吗
+#### NIO
+- 如何判断状态读就绪？ 如何判断状态写就绪？
+#### 网络
+- TCP报文里面有ip吗
+
 #### web
 - spring aop 是如何实现的？ 我： 只知道基于代理， 源码没看过。。。
 - mysql 驱动参数有哪些？ 我： url, password, username. 追问：还有呢？ 我：存储引擎的设置。事务的设置。还有一些安全的设置。
