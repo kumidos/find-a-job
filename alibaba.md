@@ -17,3 +17,7 @@
 - 设计一个sqrt, 答： 二分。 问：其时间复杂度？ 我： logn. 追问：更好的方法（面试官说根“牛顿逐步逼近法”）
 - 讲一下排序算法有哪些？ 超大集合排序你怎么排？讲一下实现思路？（这个完全不会， 看到这里的人希望重视这个问题）
 - 最短路径有些什么解决思路？答： bfs 拓扑？ （不是很确定，待修正）
+
+#### 补充知识点
+- [为什么需要索引](https://www.kancloud.cn/kancloud/theory-of-mysql-index/41856)
+- [索引详解](https://mp.weixin.qq.com/s/jmVwXHm9bQBcx5AIoyIaqw)
