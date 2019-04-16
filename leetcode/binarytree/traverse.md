@@ -14,40 +14,41 @@ public int largestBSTSubtree(TreeNode root) {
 - lc 971 Flip Binary Tree To Match Preorder Traversal
 - 典型中序遍历 ， 数组按序访问即可， 其中一个test case挂掉表明， 需要检查左子树是否挂掉来确定下一步。
 ```java
-    List<Integer> er = new ArrayList<>();
+    class Solution {
+    
     List<Integer> res = new ArrayList<>();
     int index = 0;
     public List<Integer> flipMatchVoyage(TreeNode root, int[] voyage) {
-        flip(root, voyage);
-        
-        if(index == voyage.length  && er.size() == 0)
+        boolean check = flip(root, voyage);
+        if(check){
             return res;
-        else{
-            return er;
+        } else {
+            return Arrays.asList(new Integer[] {-1});
         }
+        
     }
     
-    private void flip(TreeNode node, int[] voyage){
+    private boolean flip(TreeNode node, int[] voyage){
         if(node == null) 
-            return;
+            return true;
         if(index < voyage.length && node.val != voyage[index]){
-            er.add(-1);
-            return;
+           
+            return false;
         }
         index ++;
-        if(node.left != null && node.right != null){
-            TreeNode l = node.left, r = node.right;
+        TreeNode l = node.left, r = node.right;
+        if(l != null && r != null ){
+           
             if(index < voyage.length && l.val != voyage[index] && r.val == voyage[index]){
                 node.left = r;
                 node.right = l;
                 res.add(node.val);
             }
         }
-        flip(node.left, voyage);
-        if(er.size() != 0)
-            return;
-        flip(node.right, voyage);
-            
+        
+        return flip(node.left, voyage) && flip(node.right, voyage);
+         
             
     }
+}
 ```
